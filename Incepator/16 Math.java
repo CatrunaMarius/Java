@@ -1,5 +1,5 @@
 class apples{
-    public staciv void main (String [] args) {
+    public static void main (String [] args) {
         System.out.println(Math.abs(-26.7));
     }
 }
