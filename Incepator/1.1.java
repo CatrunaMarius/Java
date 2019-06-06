@@ -4,7 +4,7 @@ class apples{
           num = 5.28;
           
           System.out.print("I want ");
-          System.out.println(num);
+          System.out.print(num);
           System.out.println(" movies");
           }
 }          
