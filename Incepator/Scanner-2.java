@@ -7,7 +7,7 @@ class scanner{
           System.out.println("Entre first num: ");
           fnum = mars.nextDouble();
           System.out.println("Entre second num: ");
-          snum = mars.nextDuble();
+          snum = mars.nextDouble();
           answer = fnum + snum;
           System.out.println(answer);
           }
