@@ -3,6 +3,6 @@ class apples{
              double num;
              num = 5.28;
              System.out.print(num);
-
+       }
 
 }
