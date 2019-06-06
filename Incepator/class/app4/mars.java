@@ -13,7 +13,7 @@ public class mars{
          return girlName;
    }
    
-   public void Saying (){
+   public void saying (){
         System.out.printf("Your first gf was %s\n", getName());
     }
  }
