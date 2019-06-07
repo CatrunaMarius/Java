@@ -5,6 +5,7 @@ class apples{
       food foodObject = new food();
       
       marsObject.eat();
+      marsObject.method();
       foodObject.eat();
       
     }
