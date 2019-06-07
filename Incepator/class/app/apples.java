@@ -4,5 +4,6 @@ class apples{
          System.out.println(marsObject.toMilitary());
          marsObject.setTime(13,27,16);
          System.out.println(marsObject.toMilitary());
+         System.out.println(marsObject.toStrings());
       }
  }
