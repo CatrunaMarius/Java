@@ -12,6 +12,6 @@ public class data{
    }
    
    public String toString(){
-        return String.format("%d/%d/%d", month, day, year);
+        return String.format("%d/%d/%d", day, month, year);
    }
 }
