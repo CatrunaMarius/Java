@@ -12,7 +12,7 @@ public enum mars{
    
    }
    
-   public String getdesc(){
+   public String getDesc(){
         return desc;
    }
    
