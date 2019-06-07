@@ -1,9 +1,9 @@
-public class potpie{
+public class data{
    private int month;
    private int day;
    private int year;
    
-   public potpie(int m, int d, int y){
+   public data(int m, int d, int y){
        month = m;
        day = d;
        year = y;
