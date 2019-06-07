@@ -7,7 +7,9 @@ class apples{
 		
 		DogList DLO = new DogList();
 		Dog d = new Dog();
+		Dog b = new Dog();
 		DLO.add(d);
+		DLO.add(b);
 		
 	}
 	
