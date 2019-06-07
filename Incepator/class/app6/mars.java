@@ -1,8 +1,8 @@
 public class mars {
    private String name;
-   private potpie birthday;
+   private data birthday;
    
-   public mars (String theName, potpie theDate){
+   public mars (String theName, data theDate){
          name = theName;
          birthday = theDate;
    
