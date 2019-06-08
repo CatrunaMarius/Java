@@ -1,0 +1,195 @@
+// Arrays, liste legate, copaci etc. sunt cele mai bune pentru datele care reprezintă obiecte reale.
+
+// Stivele și cozile sunt în schimb utilizate pentru a finaliza o sarcină și sunt curând eliminate.
+
+// Stacks & Queues
+// 1. Permiteți adăugarea sau eliminarea unui singur element la un moment dat
+// 2. Stivele permit accesul la ultimul element introdus (LIFO)
+// 3. Cozi permit accesul la primul element introdus (FIFO)
+
+import java.util.Arrays;
+
+public class TheStack {
+	
+	private String[] stackArray;
+	private int stackSize;
+	
+	// Setează stive ca goale
+	
+	private int topOfStack = -1;
+	
+	TheStack(int size){
+		
+		stackSize = size;
+		
+		stackArray = new String[size];
+		
+		// Alocă valoarea de la -1 la fiecare valoare din matrice, astfel că controlez ce se imprimă pe ecran
+		
+		Arrays.fill(stackArray, "-1");
+		
+	}
+
+	public void push(String input){
+		
+		if(topOfStack+1 < stackSize){
+			
+			topOfStack++;
+			
+			stackArray[topOfStack] = input;
+			
+		} else System.out.println("Sorry But the Stack is Full");
+		
+		displayTheStack();
+		
+		System.out.println("PUSH " + input + " Was Added to the Stack\n");
+		
+	}
+	
+	public String pop(){
+		
+		if(topOfStack >= 0){
+			
+			displayTheStack();
+			
+			System.out.println("POP " + stackArray[topOfStack] + " Was Removed From the Stack\n");
+			
+			// La fel ca în memorie, un element nu este șters, ci nu este disponibil
+			
+			stackArray[topOfStack] = "-1"; // Assigns -1 so the value won't appear
+			
+			return stackArray[topOfStack--];
+	
+			
+		} else {
+			
+			displayTheStack();
+			
+			System.out.println("Sorry But the Stack is Empty");
+			
+			return "-1";
+		}
+		
+		
+	}
+	
+	public String peek(){
+		
+		displayTheStack();
+		
+		System.out.println("PEEK " + stackArray[topOfStack] + " Is at the Top of the Stack\n");
+		
+		return stackArray[topOfStack];
+		
+	}
+	
+	public void pushMany(String multipleValues){
+		
+		String[] tempString = multipleValues.split(" ");
+		
+		for(int i = 0; i < tempString.length; i++){
+			
+			push(tempString[i]);
+			
+		}
+		
+	}
+	
+	public void popAll(){
+		
+		for(int i = topOfStack; i >= 0; i--){
+			
+			pop();
+			
+		}
+		
+	}
+	
+	public void popDisplayAll(){
+		
+		String theReverse = "";
+		
+		for(int i = topOfStack; i >= 0; i--){
+			
+			theReverse += stackArray[i];
+			
+		}
+		
+		System.out.println("The Reverse: " + theReverse);
+		
+		popAll();
+		
+	}
+	
+	public void displayTheStack(){
+		
+			for(int n = 0; n < 61; n++)System.out.print("-");
+			
+			System.out.println();
+			
+			for(int n = 0; n < stackSize; n++){
+				
+				System.out.format("| %2s "+ " ", n);
+				
+			}
+			
+			System.out.println("|");
+			
+			for(int n = 0; n < 61; n++)System.out.print("-");
+			
+			System.out.println();
+			
+			for(int n = 0; n < stackSize; n++){
+				
+				
+				
+				if(stackArray[n].equals("-1")) System.out.print("|     ");
+				
+				else System.out.print(String.format("| %2s "+ " ", stackArray[n]));
+				
+			}
+			
+			System.out.println("|");
+			
+			for(int n = 0; n < 61; n++)System.out.print("-");
+			
+			System.out.println();
+		
+	}
+	
+	public static void main(String[] args){
+		
+		TheStack theStack = new TheStack(10);
+		
+		theStack.push("10");
+		theStack.push("17");
+		theStack.push("13");
+		
+		// Uită-te la valoarea de sus a stivei
+		
+		theStack.peek();
+		
+		// Eliminați valorile din stivă (LIFO)
+		
+		theStack.pop();
+		theStack.pop();
+		theStack.pop();
+		
+		// Adăugați multe la stivă
+		
+		theStack.pushMany("R E D R U M");
+		
+		// Eliminați toate din stivă
+		
+		// theStack.popAll();
+		
+		// Eliminați toate din stivă și le imprimați
+		
+		theStack.popDisplayAll();
+		
+		theStack.displayTheStack();
+		
+		
+	}
+	
+}
