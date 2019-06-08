@@ -6,7 +6,7 @@ class apples{
             mars marsObject = new mars();
             System.out.println("Entre name of first gf here: ");
             String temp input.nextLine();
-            tunaObject.setName (temp);
+            marsObject.setName (temp);
             marsObject.saying();
          }
  }
